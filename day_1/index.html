@@ -6,16 +6,41 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1 id="count">0</h1>
+    <button onclick="increment()">Increment</button>
+    <button onclick="decrement()">Decrement</button>
+    <button onclick="reset()">Reset</button>
 
     <script>
-        // function square(x) {
-        //     return x * x;
-        // }
-
-        let sq = x => x * x;
-        const result = sq(5);
-        document.write(`<h1>Square of 5 is ${result}</h1>`);
+        function increment() {
+            // 1. Get the value of the h1
+            // 2. Convert the value to a number
+            // 3. Add 1 to the number
+            // 4. Set the value of the h1 to the new number
+            const h1 = document.getElementById('count');
+            const value = parseInt(h1.innerText);
+            const newValue = value + 1;
+            h1.innerText = newValue;
+        }
+        function decrement() {
+            // 1. Get the value of the h1
+            // 2. Convert the value to a number
+            // 3. Subtract 1 from the number
+            // 4. Set the value of the h1 to the new number
+            const h1 = document.getElementById('count');
+            const value = parseInt(h1.innerText);
+            const newValue = value - 1;
+            if (newValue < 0) {
+                alert('Cannot go below 0');
+                return;
+            }
+            h1.innerText = newValue;
+        }
+        function reset() {
+            // 1. Set the value of the h1 to 0
+            const h1 = document.getElementById('count');
+            h1.innerText = 0;
+        }
     </script>
 </body>
 </html>
