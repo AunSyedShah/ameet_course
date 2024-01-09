@@ -10,44 +10,16 @@
 <body>
 
     <script>
-        let person = {
-            name: 'John',
-            age: 30,
-            weight: 88.6,
-            isAdmin: true,
-            address: {
-                street: 'Rua do Carmo',
-                number: 70,
-                city: 'Rio de Janeiro',
-                state: 'RJ',
-            },
-            friends: [
-                {
-                    "name": "Paul",
-                    "age": 31,
-                },
-                {
-                    "name": "George",
-                    "age": 32,
-                },
-                {
-                    "name": "Ringo",
-                    "age": 33,
-                }
-            ]
-        }
-        // const user_age = person.age; // get the age
-        // const user_name = person.name; // get the name
-        // const user_weight = person.weight; // get the weight
-        // const user_city = person.address.city; // get the city
+        let marks = [34, 23, 24, 93, 73, 25, 34];
+        const mark_1 = marks[0];
+        const mark_2 = marks[1];
 
-        let { name, age, weight, isAdmin } = person;
-        let { address: { city } } = person;
-        let { friends: [paul] } = person;
-        document.write(name + '<br>');
-        document.write(age + '<br>');
-        document.write(weight + '<br>');
-        document.write(isAdmin + '<br>');
+        // another appraoch
+
+        let [m_1, m_2, m_3, ...m4] = marks;
+        console.log(m_1, m_2, m_3);
+        console.log('value of m4');
+        console.log(m4);
     </script>
 </body>
 
